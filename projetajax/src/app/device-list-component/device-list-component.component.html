@@ -1,0 +1,21 @@
+<div class="device-list">
+  <ul class="devices" style="list-style-type:none;">
+    <li *ngFor="let device of devices" class="device">
+      <div (click)="toggleDetails(device)">
+        <span class="device-text">{{ device.name }}</span>
+        <div *ngIf="device.showDetails" class="device-details">
+          <p><strong>ID:</strong> {{ device.id }}</p>
+          <p><strong>Name:</strong> {{ device.name }}</p>
+          <p><strong>Created:</strong> {{ device.created_at }}</p>
+          <p><strong>Updated:</strong> {{ device.updated_at }}</p>
+          <p><strong>Gateway:</strong> {{ device.gateway }}</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+</div>
+
+
+
+

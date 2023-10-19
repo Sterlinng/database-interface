@@ -1,0 +1,9 @@
+<h2>Ajouter un Dispositif</h2>
+<form (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="name">Nom du Dispositif :</label>
+    <input type="text" id="name" name="name" [(ngModel)]="newDevice.name" required>
+  </div>
+  <!-- Ajoutez d'autres champs pour d'autres détails du dispositif -->
+  <button type="submit">Ajouter</button>
+</form>
