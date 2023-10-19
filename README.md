@@ -1,75 +1,78 @@
-# Guide d'utilisation du projet Ajax avec Laravel et Angular
+# Ajax Project Setup Guide with Laravel and Angular
 
-Ce guide vous expliquera comment configurer et exécuter le projet Ajax avec Laravel et Angular.
+This guide will explain how to set up and run the Ajax project with Laravel and Angular.
 
-## Configuration du serveur de base de données MySQL
+## MySQL Database Server Configuration
 
-1. Ouvrez votre terminal et exécutez la commande suivante pour accéder au serveur MySQL :
+1. Open your terminal and execute the following command to access the MySQL server:
 ```mysql -u root -p```
 
-2. Entrez le mot de passe de votre serveur MySQL lorsque vous y êtes invité. (appuyez sur "Entrée", il n'y en a pas.)
 
-## Configuration du serveur Laravel
+2. Enter your MySQL server password when prompted. (Press "Enter" as there is no password displayed.)
 
-3. Accédez au dossier "device" où se trouve le serveur Laravel en utilisant la commande :
+## Laravel Server Configuration
+
+3. Navigate to the "device" folder where the Laravel server is located using the command:
 ```cd device```
 
-4. Lancez le serveur Laravel avec la commande :
+4. Start the Laravel server with the following command:
 ```php artisan serve```
 
-6. Le serveur Laravel est maintenant en cours d'exécution et prêt à traiter les demandes.
+6. The Laravel server is now running and ready to handle requests.
 
-## Configuration du serveur Angular
 
-6. Revenez au répertoire du projet principal en utilisant la commande :
+## Angular Server Configuration
+
+6. Return to the main project directory using the command:
 ```cd ..```
 
-7. Accédez au dossier "projetajax" où se trouve l'application Angular avec la commande :
+7. Access the "projetajax" folder where the Angular application is located with the command:
 ```cd projetajax```
 
 
-8. Exécutez la commande suivante pour démarrer l'application Angular :
+8. Execute the following command to start the Angular application:
 ```ng serve```
 
 
-9. L'application Angular est maintenant en cours d'exécution et écoute les demandes sur http://localhost:4200/.
+9. The Angular application is now running and listening for requests at http://localhost:4200/.
 
-## Accès à l'application
+## Accessing the Application
 
-10. Ouvrez votre navigateur Web et accédez à l'URL suivante :
+10. Open your web browser and go to the following URL:
  ```http://localhost:4200/```
 
-11. Vous pouvez maintenant utiliser l'application pour interagir avec les données du serveur Laravel via des appels Ajax.
+11. You can now use the application to interact with the data from the Laravel server via Ajax calls.
 
 --------
 
-# Utilisation de votre logiciel avec une base de données personnalisée
+# Using Your Software with a Custom Database
 
-Pour utiliser votre propre base de données avec ce logiciel, suivez ces étapes :
+To use your own database with this software, follow these steps:
 
-## Étape 1 : Configuration de la base de données
+## Step 1: Database Configuration
 
-1. Ouvrez le fichier `.env` situé dans le répertoire `device/`.
+1. Open the `.env` file located in the `device/` directory.
 
-2. Modifiez la variable `DB_DATABASE` avec le nom de votre base de données personnalisée. Par exemple, si votre base de données s'appelle `ma_base_de_donnees`, remplacez la valeur par `ma_base_de_donnees`.
+2. Modify the `DB_DATABASE` variable with the name of your custom database. For example, if your database is named `my_database`, replace the value with `my_database`.
 
-3. Si votre base de données nécessite un mot de passe, assurez-vous de modifier également la variable `DB_PASSWORD` en conséquence.
+3. If your database requires a password, make sure to also modify the `DB_PASSWORD` variable accordingly.
 
-## Étape 2 : Configuration de l'application Angular
+## Step 2: Angular Application Configuration
 
-1. Ouvrez le fichier `device-list-component.component.ts` situé dans le répertoire `projetajax/src/app/device-list-component/`.
+1. Open the `device-list-component.component.ts` file located in the `projetajax/src/app/device-list-component/` directory.
 
-2. Trouvez la variable `databaseName` (commentée dans le fichier) et remplacez la valeur par le nom de votre base de données personnalisée. Par exemple, si vous avez utilisé `ma_base_de_donnees` dans l'étape précédente, remplacez la valeur par `'ma_base_de_donnees'`.
+2. Locate the `databaseName` variable (commented in the file) and replace the value with the name of your custom database. For example, if you used `my_database` in the previous step, replace the value with `'my_database'`.
 
-## Étape 3 : Utilisation de votre base de données personnalisée
+## Step 3: Using Your Custom Database
 
-Après avoir effectué ces étapes, vous pouvez exécuter votre logiciel et il interagira avec votre propre base de données personnalisée.
+After completing these steps, you can run your software, and it will interact with your own custom database.
 
-N'oubliez pas de redémarrer votre serveur Laravel et de recompiler votre application Angular après avoir apporté ces modifications.
+Don't forget to restart your Laravel server and recompile your Angular application after making these changes.
 
-C'est tout ! Vous avez désormais configuré votre logiciel pour utiliser votre base de données personnalisée.
+That's it! You have now configured your software to use your custom database.
 
----
+--- 
+
 
 
 
